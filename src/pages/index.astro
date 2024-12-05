@@ -33,65 +33,167 @@ import '@fontsource-variable/dm-sans';
 
             .grid_container {
                 display: grid;
-                grid-template-areas:;
+                gap: 2rem;
+                grid-template-columns: 1fr;
+                align-items: center;
+                grid-template-areas:
+                    'social'
+                    'multiple'
+                    'posting'
+                    'schedule'
+                    'growth'
+                    'speed'
+                    'quicker'
+                    'content';
+            }
+
+            .social {
+                grid-area: social;
+            }
+
+            .multiple {
+                grid-area: multiple;
+            }
+
+            .posting {
+                grid-area: posting;
+            }
+
+            .growth {
+                grid-area: growth;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .speed {
+                grid-area: speed;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .schedule {
+                grid-area: schedule;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                border-radius: 1rem;
+            }
+
+            .content {
+                grid-area: content;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .quicker {
+                grid-area: quicker;
+                display: flex;
+                flex-direction: column;
+                padding: 2rem;
             }
         </style>
     </head>
-    <body class="">
-        <main class="flex max-w-7xl">
-            <div class="flex flex-col rounded-xl bg-purple500 p-6 text-white">
-                <p class="text-5xl font-semibold">
+    <body class="bg-white p-4">
+        <main class="grid_container mb-10 max-w-7xl">
+            <div
+                class="social flex flex-col items-center justify-center gap-5 rounded-xl bg-purple500 p-6 text-white"
+            >
+                <p class="text-center text-5xl font-semibold">
                     Social Media <span class="text-yellow500">10x</span> Faster with
                     AI
                 </p>
-                <img src="/illustration-five-stars.webp" alt="" />
+                <img width="200px" src="/illustration-five-stars.webp" alt="" />
 
                 <div class="text-center text-xs text-yellow100">
                     Over 4,000 5-star reviews
                 </div>
             </div>
 
-            <div class="flex flex-col items-center rounded-lg bg-yellow100 p-3">
+            <div
+                class="multiple flex flex-col items-center justify-center rounded-lg p-3 shadow-lg"
+            >
                 <img src="/illustration-multiple-platforms.webp" alt="" />
                 <p
-                    class="pt-6 text-2xl font-semibold leading-[1.25rem] text-black"
+                    class="pt-6 text-2xl font-semibold leading-[1.25rem] tracking-tighter text-black"
                 >
                     Manage multiple accounts and platforms.
                 </p>
             </div>
 
-            <div class="bg-yellow500 p-3">
+            <div
+                class="posting relative h-52 overflow-hidden rounded-lg bg-yellow500 p-4"
+            >
                 <p
                     class="pb-3 text-2xl font-semibold leading-[1.25rem] text-black"
                 >
                     Maintain a consistent posting schedule.
                 </p>
-                <img src="/illustration-consistent-schedule.webp" alt="" />
+                <img
+                    class="top-110 absolute left-3 w-56 px-1"
+                    src="/illustration-consistent-schedule.webp"
+                    alt=""
+                />
             </div>
 
-            <div>
-                Schedule to social media. Optimize post timings to publish
-                content at the perfect time for your audience.
+            <div class="schedule bg-purple100">
+                <p class="py-5 text-2xl font-semibold tracking-tighter">
+                    Schedule to social media.
+                </p>
+                <img
+                    width="290px"
+                    src="/illustration-schedule-posts.webp"
+                    alt=""
+                />
+                <p class="px-4 py-6 text-center text-lg font-medium leading-5">
+                    Optimize post timings to publish content at the perfect time
+                    for your audience.
+                </p>
             </div>
 
-            <div>Grow followers with non-stop content.</div>
+            <div class="growth rounded-lg bg-purple500 p-3">
+                <img
+                    class="pt-2"
+                    width="240px"
+                    src="/illustration-grow-followers.webp"
+                    alt=""
+                />
+                <p
+                    class="px-4 py-6 text-center text-3xl font-semibold leading-6 text-white"
+                >
+                    Grow followers with non-stop content.
+                </p>
+            </div>
 
-            <div>>56% faster audience growth</div>
-            <div>Create and schedule content quicker.</div>
-            <div>Write your content using AI.</div>
-
-            <div class="attribution">
-                Challenge by
-                <a href="https://www.frontendmentor.io?ref=challenge"
-                    >Frontend Mentor</a
-                >. Coded by <a href="#">Your Name Here</a>.
+            <div class="speed rounded-lg p-5 shadow-inner">
+                <span class="text-4xl font-semibold">>56%</span> faster audience
+                growth
+                <img
+                    width="180px"
+                    src="/illustration-audience-growth.webp"
+                    alt=""
+                />
+            </div>
+            <div class="quicker rounded-lg bg-yellow100">
+                <p class="pb-5 text-3xl font-bold leading-6 tracking-tighter">
+                    Create and schedule content <span class="text-purple500"
+                        >quicker.</span
+                    >
+                </p>
+                <img
+                    width="200px"
+                    src="/illustration-create-post.webp"
+                    alt=""
+                />
+            </div>
+            <div class="content rounded-lg bg-yellow500 p-5">
+                <p
+                    class="py-5 text-3xl font-semibold leading-7 tracking-tighter"
+                >
+                    Write your content using AI.
+                </p>
+                <img width="225px" src="/illustration-ai-content.webp" alt="" />
             </div>
         </main>
     </body>
-
-    <div class="attribution">
-        Challenge by <a href="https://www.frontendmentor.io?ref=challenge"
-            >Frontend Mentor</a
-        >. Coded by <a href="#">Your Name Here</a>.
-    </div>
 </html>
